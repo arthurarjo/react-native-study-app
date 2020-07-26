@@ -25,6 +25,19 @@ module.exports = {
           ".web.tsx",
         ],
       },
+
+      "babel-plugin-root-import": {
+        paths: [
+          {
+            rootPathPrefix: "~",
+            rootPathSuffix: "src",
+          },
+          {
+            rootPathPrefix: "assets",
+            rootPathSuffix: "assets",
+          },
+        ],
+      },
     },
   },
   rules: {
@@ -42,9 +55,9 @@ module.exports = {
     "react-native/no-color-literals": 0,
     "react-native/no-raw-text": 0,
     "import/no-extraneous-dependencies": 2,
-    "import/extensions": ["error", "never", {svg: "always"}],
+    "import/extensions": ["error", "never", { svg: "always" }],
     "import/no-named-as-default-member": 2,
-    "import/order": ["error", {"newlines-between": "always"}],
+    "import/order": ["error", { "newlines-between": "always" }],
     "import/no-duplicates": 2,
     "import/no-useless-path-segments": 2,
     "import/no-cycle": 2,
@@ -61,7 +74,10 @@ module.exports = {
     "@typescript-eslint/indent": 0,
     "import/no-anonymous-default-export": 2,
     "react-hooks/rules-of-hooks": 2,
-    "react-hooks/exhaustive-deps": ["error", {additionalHooks: "(useMemoOne)"}],
+    "react-hooks/exhaustive-deps": [
+      "error",
+      { additionalHooks: "(useMemoOne)" },
+    ],
     "jest/no-identical-title": 2,
     "jest/valid-expect": 2,
     camelcase: 2,

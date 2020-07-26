@@ -2,13 +2,13 @@ import { createText, createBox } from "@shopify/restyle";
 
 const theme = {
   colors: {
-    primary: "#2CB9B0",
+    primary: "#FD8700",
     secondary: "#0C0D34",
     danger: "#FF0058",
     text: "rgba(12, 13, 52, 0.7)",
     white: "#FFF",
-    grey: "rgba(12, 13, 52, 0.05)",
-    darkGrey: "#8A8D90",
+    black: "#2B2A2A",
+    grey: "#D4D4D4",
   },
   spacing: {
     s: 8,
@@ -30,10 +30,10 @@ const theme = {
       color: "white",
       textAlign: "center",
     },
-    title1: {
-      fontSize: 28,
-      fontFamily: "Poppins-Semibold",
-      color: "secondary",
+    title: {
+      fontSize: 20,
+      fontFamily: "Poppins-Bold",
+      color: "black",
     },
     title2: {
       fontSize: 24,
@@ -49,8 +49,8 @@ const theme = {
     },
     button: {
       fontSize: 15,
-      fontFamily: "Poppins-Regular",
-      color: "text",
+      fontFamily: "Poppins-Light",
+      color: "black",
     },
   },
   breakpoints: {},

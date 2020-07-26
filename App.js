@@ -1,14 +1,22 @@
 import React from "react";
-import { View } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { ThemeProvider } from "@shopify/restyle";
 
-import { theme } from "./src/components";
+import { ThemeProvider } from "@shopify/restyle";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
+import { NavigationContainer } from "@react-navigation/native";
+
+import { theme } from "~/components";
+
+import { AuthenticationNavigator } from "~/pages/Authentication";
 
 const App = () => {
   return (
     <ThemeProvider {...{ theme }}>
-      <SafeAreaProvider></SafeAreaProvider>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <AuthenticationNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 };
